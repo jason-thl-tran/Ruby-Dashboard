@@ -1,0 +1,4 @@
+<br></br>
+<%= line_chart Well.group_by_day(:created_at).count %>
+<br></br>
+<%= line_chart @stock_data.map { |data| [data[:date], data[:close]] }, title: "Apple Stock Prices" %>

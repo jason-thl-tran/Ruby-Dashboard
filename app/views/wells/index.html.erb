@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Wells" %>
+
+<h1>Wells</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>State</th>
+      <th>MD</th>
+      <th>TVD</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @wells.each do |well| %>
+      <%= render well %>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New Well", new_well_path, class: "btn btn-primary" %>
+
+<%= render "wells/graph" %>

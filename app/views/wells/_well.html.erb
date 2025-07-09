@@ -1,0 +1,12 @@
+<tr id="<%= dom_id well %>">
+  <td><%= well.name %></td>
+  <td><%= well.state %></td>
+  <td><%= well.md %></td>
+  <td><%= well.tvd %></td>
+  <td><%= well.status %></td>
+  <td>
+    <%= link_to "Show", well_path(well), class: "btn btn-sm btn-info" %>
+    <%= link_to "Edit", edit_well_path(well), class: "btn btn-sm btn-warning" %>
+    <%= link_to "Delete", well_path(well), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-danger" %>
+  </td>
+</tr>
